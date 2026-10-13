@@ -1,0 +1,173 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" role="img" aria-labelledby="title"><title id="title">Ayurvaidya botanical emblem with golden nectar, tulsi leaves and mandala rings</title>
+<defs>
+<!-- Gradients -->
+<linearGradient id="goldGlow" x1="0%" x2="100%" y1="0%" y2="100%">
+<stop offset="0%" stop-color="#ecc970"></stop>
+<stop offset="50%" stop-color="#d4a343"></stop>
+<stop offset="100%" stop-color="#9a6e1a"></stop>
+</linearGradient>
+<linearGradient id="leafGrad1" x1="0%" x2="100%" y1="0%" y2="100%">
+<stop offset="0%" stop-color="#2a7a40"></stop>
+<stop offset="100%" stop-color="#0c3117"></stop>
+</linearGradient>
+<linearGradient id="leafGrad2" x1="0%" x2="100%" y1="0%" y2="100%">
+<stop offset="0%" stop-color="#4ade80"></stop>
+<stop offset="50%" stop-color="#1b5e20"></stop>
+<stop offset="100%" stop-color="#0c3117"></stop>
+</linearGradient>
+<linearGradient id="dropGrad" x1="30%" x2="70%" y1="0%" y2="100%">
+<stop offset="0%" stop-color="#fef08a"></stop>
+<stop offset="40%" stop-color="#eab308"></stop>
+<stop offset="85%" stop-color="#ca8a04"></stop>
+<stop offset="100%" stop-color="#854d0e"></stop>
+</linearGradient>
+<radialGradient cx="50%" cy="50%" id="sunBurst" r="50%">
+<stop offset="0%" stop-color="#eab308" stop-opacity="0.35"></stop>
+<stop offset="60%" stop-color="#eab308" stop-opacity="0.08"></stop>
+<stop offset="100%" stop-color="#eab308" stop-opacity="0"></stop>
+</radialGradient>
+<filter id="glow">
+<feGaussianBlur result="coloredBlur" stdDeviation="3.5"></feGaussianBlur>
+<feMerge>
+<feMergeNode in="coloredBlur"></feMergeNode>
+<feMergeNode in="SourceGraphic"></feMergeNode>
+</feMerge>
+</filter>
+</defs>
+<style>
+    @keyframes pulseRing {
+      0% { transform: scale(0.96); opacity: 0.4; }
+      50% { transform: scale(1.03); opacity: 0.85; }
+      100% { transform: scale(0.96); opacity: 0.4; }
+    }
+    @keyframes rotateMandala {
+      from { transform: rotate(0deg); }
+      to { transform: rotate(360deg); }
+    }
+    @keyframes counterRotate {
+      from { transform: rotate(360deg); }
+      to { transform: rotate(0deg); }
+    }
+    @keyframes floatDrop {
+      0%, 100% { transform: translateY(0px) scale(1); }
+      50% { transform: translateY(-7px) scale(1.03); }
+    }
+    @keyframes leafSwayLeft {
+      0%, 100% { transform: rotate(0deg); }
+      50% { transform: rotate(-3.5deg); }
+    }
+    @keyframes leafSwayRight {
+      0%, 100% { transform: rotate(0deg); }
+      50% { transform: rotate(3.5deg); }
+    }
+    @keyframes shimmerGold {
+      0%, 100% { opacity: 0.75; filter: drop-shadow(0 0 2px rgba(212,163,67,0.3)); }
+      50% { opacity: 1; filter: drop-shadow(0 0 10px rgba(234,179,8,0.7)); }
+    }
+    @keyframes auraExpand {
+      0% { r: 160; opacity: 0.25; }
+      50% { r: 185; opacity: 0.55; }
+      100% { r: 160; opacity: 0.25; }
+    }
+
+    .sun-aura {
+      animation: auraExpand 6s ease-in-out infinite;
+      transform-origin: 250px 250px;
+    }
+    .mandala-outer {
+      animation: rotateMandala 70s linear infinite;
+      transform-origin: 250px 250px;
+    }
+    .mandala-inner {
+      animation: counterRotate 45s linear infinite;
+      transform-origin: 250px 250px;
+    }
+    .pulse-circle {
+      animation: pulseRing 5s ease-in-out infinite;
+      transform-origin: 250px 250px;
+    }
+    .leaf-left {
+      animation: leafSwayLeft 5s ease-in-out infinite;
+      transform-origin: 250px 300px;
+    }
+    .leaf-right {
+      animation: leafSwayRight 5s ease-in-out infinite;
+      transform-origin: 250px 300px;
+    }
+    .golden-nectar {
+      animation: floatDrop 4s ease-in-out infinite;
+      transform-origin: 250px 250px;
+    }
+    .gold-shimmer {
+      animation: shimmerGold 3.5s ease-in-out infinite;
+    }
+  @media(prefers-reduced-motion:reduce){*{animation:none!important}}
+*{animation:none!important}
+</style>
+<!-- Ambient Golden Aura -->
+<circle class="sun-aura" cx="250" cy="250" fill="url(#sunBurst)" r="170"></circle>
+<!-- Outer Sacred Geometry Ring / Dashes -->
+<g class="mandala-outer">
+<circle cx="250" cy="250" fill="none" opacity="0.45" r="215" stroke="#d4a343" stroke-dasharray="3 8" stroke-width="1.2"></circle>
+<circle cx="250" cy="250" fill="none" opacity="0.3" r="200" stroke="#0c3117" stroke-dasharray="14 14" stroke-width="1.5"></circle>
+<!-- 8 Cardinal Botanical Dots -->
+<circle cx="250" cy="35" fill="#d4a343" r="3.5"></circle>
+<circle cx="250" cy="465" fill="#d4a343" r="3.5"></circle>
+<circle cx="35" cy="250" fill="#d4a343" r="3.5"></circle>
+<circle cx="465" cy="250" fill="#d4a343" r="3.5"></circle>
+<circle cx="98" cy="98" fill="#0c3117" r="2.8"></circle>
+<circle cx="402" cy="402" fill="#0c3117" r="2.8"></circle>
+<circle cx="402" cy="98" fill="#0c3117" r="2.8"></circle>
+<circle cx="98" cy="402" fill="#0c3117" r="2.8"></circle>
+</g>
+<!-- Inner Subtle Radiant Halo -->
+<g class="mandala-inner">
+<circle cx="250" cy="250" fill="none" opacity="0.5" r="175" stroke="#ecc970" stroke-dasharray="6 12" stroke-width="1"></circle>
+<!-- Delicate Lotus Petal Accents -->
+<path d="M250,85 C255,100 255,105 250,115 C245,105 245,100 250,85 Z" fill="#d4a343" opacity="0.6"></path>
+<path d="M250,415 C255,400 255,395 250,385 C245,395 245,400 250,415 Z" fill="#d4a343" opacity="0.6"></path>
+<path d="M85,250 C100,255 105,255 115,250 C105,245 100,245 85,250 Z" fill="#d4a343" opacity="0.6"></path>
+<path d="M415,250 C400,255 395,255 385,250 C395,245 400,245 415,250 Z" fill="#d4a343" opacity="0.6"></path>
+</g>
+<!-- Pulsing Sacred Ring -->
+<circle class="pulse-circle" cx="250" cy="250" fill="#fdfaf3" opacity="0.9" r="148" stroke="url(#goldGlow)" stroke-width="2.5"></circle>
+<!-- Sacred Botanical Base (Classical Mortar & Lotus Pedestal) -->
+<g class="gold-shimmer" id="pedestal">
+<!-- Stylized Lotus Base Leaves -->
+<path d="M190,325 C210,340 240,345 250,345 C260,345 290,340 310,325 C285,348 250,352 190,325 Z" fill="url(#goldGlow)"></path>
+<!-- Mortar Arc Contour -->
+<path d="M175,305 C185,342 220,356 250,356 C280,356 315,342 325,305 C295,322 205,322 175,305 Z" fill="#0c3117" opacity="0.92"></path>
+<path d="M195,310 C215,320 285,320 305,310 C285,326 215,326 195,310 Z" fill="#ecc970" opacity="0.8"></path>
+</g>
+<!-- Left Sacred Tulsi Leaf -->
+<g class="leaf-left">
+<path d="M250,305 C205,295 155,250 162,192 C185,202 230,235 250,305 Z" fill="url(#leafGrad1)"></path>
+<!-- Leaf Spine & Veins -->
+<path d="M250,305 C210,265 178,220 162,192" fill="none" opacity="0.65" stroke="#4ade80" stroke-width="1.8"></path>
+<path d="M210,270 C195,260 180,248 172,230" fill="none" opacity="0.45" stroke="#4ade80" stroke-width="1.2"></path>
+<path d="M230,290 C215,282 198,272 190,255" fill="none" opacity="0.45" stroke="#4ade80" stroke-width="1.2"></path>
+</g>
+<!-- Right Sacred Tulsi Leaf -->
+<g class="leaf-right">
+<path d="M250,305 C295,295 345,250 338,192 C315,202 270,235 250,305 Z" fill="url(#leafGrad2)"></path>
+<!-- Leaf Spine & Veins -->
+<path d="M250,305 C290,265 322,220 338,192" fill="none" opacity="0.65" stroke="#86efac" stroke-width="1.8"></path>
+<path d="M290,270 C305,260 320,248 328,230" fill="none" opacity="0.45" stroke="#86efac" stroke-width="1.2"></path>
+<path d="M270,290 C285,282 302,272 310,255" fill="none" opacity="0.45" stroke="#86efac" stroke-width="1.2"></path>
+</g>
+<!-- Central Amrita / Golden Herbal Nectar Drop (Floating) -->
+<g class="golden-nectar" filter="url(#glow)">
+<!-- Golden Elixir Teardrop -->
+<path d="M250,150 C250,150 286,206 286,236 C286,256 270,272 250,272 C230,272 214,256 214,236 C214,206 250,150 250,150 Z" fill="url(#dropGrad)"></path>
+<!-- Inner Luminous Highlight -->
+<path d="M242,175 C242,175 228,210 228,232 C228,245 236,256 248,258 C240,256 234,248 234,232 C234,212 242,175 242,175 Z" fill="#ffffff" opacity="0.75"></path>
+<!-- Micro Sparkle in Drop -->
+<circle cx="258" cy="226" fill="#ffffff" opacity="0.9" r="3"></circle>
+<circle cx="264" cy="236" fill="#ffffff" opacity="0.8" r="1.5"></circle>
+</g>
+<!-- Crown Sprout / Third Eye Balance Gem -->
+<g class="gold-shimmer">
+<path d="M250,132 C255,142 255,145 250,150 C245,145 245,142 250,132 Z" fill="#fef08a"></path>
+<circle cx="250" cy="130" fill="#ca8a04" r="2.5"></circle>
+</g>
+</svg>
