@@ -363,15 +363,17 @@
         <h2 class="section-title gs-fade">Featured Builds</h2>
 
         <div class="project-card gs-slide" data-tilt data-tilt-max="3" data-tilt-speed="400" data-tilt-glare data-tilt-max-glare="0.05">
-            <h3 class="project-title">S.M.A.R.T.S. — Strategic Machines & Advanced Remote Tracking System</h3>
+            <h3 class="project-title">S.M.A.R.T.S. — Smart Machine Asset Real-Time Tracking System</h3>
             <div class="project-meta"><span>ESP32</span><span>Quectel MC60</span><span>FreeRTOS</span><span>MQTTS</span><span>SPIFFS</span><span>OTA</span></div>
             <ul class="project-details">
                 <li>100 units live in field, 200 in active production, 1,000+ in pipeline (1,200+ scaling roadmap).</li>
+                <li>Hand-soldered and assembled S.M.A.R.T.S. components onto PCB boards; installed, field-tested and validated the GPS tracking device across self-start, non-battery magneto-coil and hybrid machine variants.</li>
                 <li>Monitors machine ON/OFF state, GPS coordinates, battery voltage, and cellular signal strength; publishes securely over MQTT/SSL via Quectel MC60 AT-command layer.</li>
                 <li>Field power design: MOSFET modem power cut-off prevents transmit-burst brownouts; ESP32 timer heartbeat and GPIO wake balance response time and power.</li>
                 <li>Multi-threaded FreeRTOS architecture: taskMachine and taskModem run concurrently; queues and event groups coordinate acquisition, network, MQTT and OTA tasks.</li>
                 <li>SPIFFS FIFO buffers telemetry through network outages; an SMS remote recovery command can reboot the device or wipe NVS.</li>
                 <li>Custom cellular OTA pipeline: firmware binary fetched from authenticated GitHub repository over HTTPS bypassing Wi-Fi dependency.</li>
+                <li>Supported hardware operations through component procurement, IoT inventory and stock records, and purchase-bill documentation.</li>
             </ul>
             <button class="logic-btn" onclick="openLogicModal('smarts')">View AT-Command Logic ></button>
         </div>
@@ -381,7 +383,9 @@
             <div class="project-meta"><span>ESP32</span><span>FreeRTOS</span><span>ACS712</span><span>Water-Level Probes</span><span>Pump &amp; Solenoid</span><span>Wi-Fi</span><span>HTTP/JSON</span></div>
             <ul class="project-details">
                 <li>Eliminated 80% of manual testing intervention by replacing human watch-and-record processes with autonomous firmware-driven duty cycles.</li>
-                <li>Fill-and-spray state machine uses water-level probes, debounced inputs and solenoid/pump control; ACS712 500-sample boot calibration captures full-load and no-load current each cycle.</li>
+                <li>Three-wire conductivity sensing applies 12 V to the water; two BC547 NPN transistor stages at the tank bottom and full levels amplify the signal to ESP32 GPIO inputs.</li>
+                <li>Two IRFZ44N MOSFET + EL817 optocoupler + 12 V relay circuits control the solenoid valve (open when low, close when full) and start the sprayer motor after filling.</li>
+                <li>ACS712 Hall-effect current sensor with 500-sample boot calibration captures motor load current for battery evaluation during each test cycle.</li>
                 <li>Dead-battery failsafe: current below 0.50 A for 4 seconds triggers an alert and safely shuts down the motor and solenoid.</li>
             </ul>
         </div>
